@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background: #2C2C31;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #2C2C31; }
+::-webkit-scrollbar-thumb { background: #B79040; }
+
+/* Form inputs */
+.tdf-input:focus {
+  border-color: #B79040 !important;
+  outline: none;
+}
+.tdf-input::placeholder {
+  color: #9A9AA2;
+  font-style: italic;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 14px;
+}
+
+/* Custom select arrow */
+select.tdf-input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Cpath d='M6 9l6 6 6-6' stroke='%23B79040' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+/* Date input tint */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0.6) sepia(1) saturate(2) hue-rotate(10deg);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Number input arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  opacity: 0.4;
+}
+
+/* Image placeholder – warm dark fill + subtle overlay */
+.img-ph {
+  background: #3A3530;
+  position: relative;
+  overflow: hidden;
+}
+.img-ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(183,144,64,0.10) 0%, rgba(187,38,33,0.06) 100%);
+  pointer-events: none;
+}
