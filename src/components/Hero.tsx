@@ -90,11 +90,12 @@ export default function Hero() {
 
             {/* Description */}
             <p
-              className="font-serif text-white/68 mb-12"
+              className="font-serif mb-12"
               style={{
                 fontSize: 'clamp(15px, 1.4vw, 18px)',
                 lineHeight: 1.75,
                 maxWidth: '480px',
+                color: 'rgba(255,255,255,0.75)',
               }}
             >
               Japanese–Brazilian fusion catering in Málaga. Exclusive private events, weddings,
