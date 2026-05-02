@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import LogoMark from './ui/LogoMark'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'About',      href: '#about' },
@@ -41,7 +41,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-3.5 no-underline">
-          <LogoMark size={42} />
+          <Image src="/logo-mark.png" alt="Tsuki Do Fogo" width={42} height={43} className="object-contain" />
           <span className="font-sans font-bold text-[13px] tracking-[0.22em] uppercase text-gold">
             Tsuki Do Fogo
           </span>

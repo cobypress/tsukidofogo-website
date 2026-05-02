@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import LogoMark from './ui/LogoMark'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'Private Catering',     href: '#services' },
@@ -43,7 +43,7 @@ export default function Footer() {
           {/* Brand column */}
           <div style={{ gridColumn: 'span 2' }}>
             <div className="flex items-center gap-3.5 mb-5">
-              <LogoMark size={48} />
+              <Image src="/logo-mark.png" alt="Tsuki Do Fogo" width={48} height={49} className="object-contain" />
               <div>
                 <div className="font-sans font-bold text-[13px] tracking-[0.22em] uppercase text-gold">
                   Tsuki Do Fogo
